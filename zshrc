@@ -28,13 +28,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load nvm bash_completion
 
 # ----------------------------------------
-# pyenv
-# ----------------------------------------
-if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-fi
-
-# ----------------------------------------
 # Shell Options
 # ----------------------------------------
 setopt AUTO_CD              # cd by typing directory name
