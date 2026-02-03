@@ -8,5 +8,6 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
 shell-integration-features = no-cursor
 split-divider-color = #222222
+theme = Mathias
 window-padding-x = 24
 window-padding-y = 24
