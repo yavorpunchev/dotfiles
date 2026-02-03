@@ -38,6 +38,15 @@ echo "Setting up Ghostty..."
 mkdir -p "$HOME/.config/ghostty"
 ln -sf "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 
+# Zed settings
+echo "Setting up Zed..."
+mkdir -p "$HOME/.config/zed"
+if [ -f "$HOME/.config/zed/settings.json" ] && [ ! -L "$HOME/.config/zed/settings.json" ]; then
+    mv "$HOME/.config/zed/settings.json" "$HOME/.config/zed/settings.json.backup"
+    echo "Backed up existing Zed settings"
+fi
+ln -sf "$DOTFILES/zed/settings.json" "$HOME/.config/zed/settings.json"
+
 # Claude Code settings
 CLAUDE_DIR="$HOME/.claude"
 if [ -d "$CLAUDE_DIR" ]; then
