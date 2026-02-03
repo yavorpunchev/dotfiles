@@ -1,0 +1,12 @@
+auto-update-channel = tip
+cursor-style = block
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+keybind = shift+enter=text:\n
+macos-icon = blueprint
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = hidden
+shell-integration-features = no-cursor
+split-divider-color = #222222
+window-padding-x = 24
+window-padding-y = 24
