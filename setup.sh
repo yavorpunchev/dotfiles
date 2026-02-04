@@ -47,6 +47,15 @@ if [ -f "$HOME/.config/zed/settings.json" ] && [ ! -L "$HOME/.config/zed/setting
 fi
 ln -sf "$DOTFILES/zed/settings.json" "$HOME/.config/zed/settings.json"
 
+# Lazygit config
+echo "Setting up Lazygit..."
+mkdir -p "$HOME/Library/Application Support/lazygit"
+if [ -f "$HOME/Library/Application Support/lazygit/config.yml" ] && [ ! -L "$HOME/Library/Application Support/lazygit/config.yml" ]; then
+    mv "$HOME/Library/Application Support/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml.backup"
+    echo "Backed up existing Lazygit config"
+fi
+ln -sf "$DOTFILES/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"
+
 # Claude Code settings
 CLAUDE_DIR="$HOME/.claude"
 if [ -d "$CLAUDE_DIR" ]; then
