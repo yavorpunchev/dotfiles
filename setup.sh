@@ -67,6 +67,13 @@ if [ -d "$CLAUDE_DIR" ]; then
     ln -sf "$DOTFILES/claude/settings.json" "$CLAUDE_DIR/settings.json"
 fi
 
+# macOS system preferences
+read -p "Apply macOS system preferences? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    source "$DOTFILES/macos.sh"
+fi
+
 # Launch agent for sync check
 read -p "Install sync checker launch agent? (y/n) " -n 1 -r
 echo
