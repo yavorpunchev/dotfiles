@@ -10,9 +10,7 @@
   "session": {
     "trust_all_worktrees": true,
   },
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
+  "edit_prediction_provider": "zed",
   "icon_theme": "Colored Zed Icons Theme Dark",
   "base_keymap": "VSCode",
   "ui_font_size": 16,
