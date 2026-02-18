@@ -1,3 +1,6 @@
+# Apps
+cask "ghostty"
+
 # CLI tools
 brew "gh"
 brew "git-delta"
