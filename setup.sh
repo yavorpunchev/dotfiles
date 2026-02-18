@@ -33,6 +33,10 @@ echo "Setting up Git..."
 ln -sf "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES/gitignore_global" "$HOME/.gitignore_global"
 
+# Spaceship prompt config
+echo "Setting up Spaceship..."
+ln -sf "$DOTFILES/spaceship.zsh" "$HOME/.config/spaceship.zsh"
+
 # Ghostty config
 echo "Setting up Ghostty..."
 mkdir -p "$HOME/.config/ghostty"
