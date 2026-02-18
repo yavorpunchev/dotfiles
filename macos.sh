@@ -26,7 +26,78 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 # Click wallpaper to reveal desktop (false = "Only in Stage Manager")
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
+# ----------------------------------------
+# Finder
+# ----------------------------------------
+
+# Default to list view
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Search current folder by default (instead of whole Mac)
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# ----------------------------------------
+# Dock
+# ----------------------------------------
+
+# Icon size and magnification
+defaults write com.apple.dock tilesize -int 35
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock largesize -int 55
+
+# Scale minimize effect (instead of genie)
+defaults write com.apple.dock mineffect -string "scale"
+
+# Minimize windows into their app icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Speed up Mission Control animations
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# Don't show recent apps
+defaults write com.apple.dock show-recents -bool false
+
+# Don't rearrange Spaces based on recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# ----------------------------------------
+# Trackpad & Mouse
+# ----------------------------------------
+
+# Tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+# Trackpad speed
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1.5
+
+# Mouse speed
+defaults write NSGlobalDomain com.apple.mouse.scaling -int 3
+
+# ----------------------------------------
+# System
+# ----------------------------------------
+
+# Auto switch between Dark/Light mode
+defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+
+# Temperature unit: Celsius
+defaults write NSGlobalDomain AppleTemperatureUnit -string "Celsius"
+
+# Disable double-space to period
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# ----------------------------------------
+# Control Center
+# ----------------------------------------
+
+# Show battery percentage
+defaults write com.apple.controlcenter BatteryShowPercentage -bool true
+
 # Apply changes
 killall Dock
+killall Finder
+killall SystemUIServer 2>/dev/null || true
+killall ControlCenter 2>/dev/null || true
 
 echo "macOS settings applied!"
