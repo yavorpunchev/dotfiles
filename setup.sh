@@ -78,17 +78,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     source "$DOTFILES/macos.sh"
 fi
 
-# Launch agent for sync check
-read -p "Install sync checker launch agent? (y/n) " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "Setting up sync checker..."
-    chmod +x "$DOTFILES/scripts/sync-check.sh"
-    mkdir -p "$HOME/Library/LaunchAgents"
-    ln -sf "$DOTFILES/scripts/com.dotfiles.sync-check.plist" "$HOME/Library/LaunchAgents/"
-    launchctl load "$HOME/Library/LaunchAgents/com.dotfiles.sync-check.plist" 2>/dev/null || true
-fi
-
 echo ""
 echo "Setup complete!"
 echo ""
