@@ -39,6 +39,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Hide hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
 # Show path bar at bottom
 defaults write com.apple.finder ShowPathbar -bool true
 
@@ -111,6 +114,14 @@ defaults write NSGlobalDomain AppleTemperatureUnit -string "Celsius"
 
 # Disable double-space to period
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# ----------------------------------------
+# Accessibility
+# ----------------------------------------
+
+# Enable scroll gesture zoom (Control + scroll)
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 # ----------------------------------------
 # Control Center
