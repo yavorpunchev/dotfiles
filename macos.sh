@@ -36,6 +36,34 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Search current folder by default (instead of whole Mac)
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show path bar at bottom
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar at bottom
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Disable warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Disable warning when emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Open new windows to home folder
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Show external drives on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+
 # ----------------------------------------
 # Dock
 # ----------------------------------------
