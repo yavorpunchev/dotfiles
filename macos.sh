@@ -119,9 +119,9 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Accessibility
 # ----------------------------------------
 
-# Enable scroll gesture zoom (Control + scroll)
+# Enable scroll gesture zoom (Command + scroll)
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 1048576
 
 # ----------------------------------------
 # Control Center
