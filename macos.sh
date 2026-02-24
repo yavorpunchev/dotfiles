@@ -39,9 +39,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Show hidden files
-defaults write com.apple.finder AppleShowAllFiles -bool true
-
 # Show path bar at bottom
 defaults write com.apple.finder ShowPathbar -bool true
 
