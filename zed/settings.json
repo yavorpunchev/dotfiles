@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.fixAll.biome": true
+  },
+  "formatter": { "language_server": { "name": "biome" } },
+  "prettier": {
+    "allowed": false,
+  },
   "session": {
     "trust_all_worktrees": true,
   },
