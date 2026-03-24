@@ -71,6 +71,22 @@ if [ -d "$CLAUDE_DIR" ]; then
     ln -sf "$DOTFILES/claude/settings.json" "$CLAUDE_DIR/settings.json"
 fi
 
+# VSCode settings
+echo "Setting up VSCode..."
+VSCODE_DIR="$HOME/Library/Application Support/Code/User"
+mkdir -p "$VSCODE_DIR"
+if [ -f "$VSCODE_DIR/settings.json" ] && [ ! -L "$VSCODE_DIR/settings.json" ]; then
+    mv "$VSCODE_DIR/settings.json" "$VSCODE_DIR/settings.json.backup"
+    echo "Backed up existing VSCode settings"
+fi
+if [ -f "$VSCODE_DIR/keybindings.json" ] && [ ! -L "$VSCODE_DIR/keybindings.json" ]; then
+    mv "$VSCODE_DIR/keybindings.json" "$VSCODE_DIR/keybindings.json.backup"
+    echo "Backed up existing VSCode keybindings"
+fi
+ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_DIR/settings.json"
+ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_DIR/keybindings.json"
+ln -sf "$DOTFILES/vscode/snippets" "$VSCODE_DIR/snippets"
+
 # macOS system preferences
 read -p "Apply macOS system preferences? (y/n) " -n 1 -r
 echo
@@ -85,3 +101,4 @@ echo "Manual steps:"
 echo "  - Restart terminal to apply shell changes"
 echo "  - Install nvm: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
 echo "  - Install bun: curl -fsSL https://bun.sh/install | bash"
+echo "  - Install VSCode extensions: cat ~/.dotfiles/vscode/extensions.txt | xargs -L 1 code --install-extension"

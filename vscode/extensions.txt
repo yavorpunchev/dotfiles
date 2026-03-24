@@ -1,0 +1,17 @@
+austenc.tailwind-docs
+biomejs.biome
+bradlc.vscode-tailwindcss
+cardinal90.multi-cursor-case-preserve
+christian-kohler.npm-intellisense
+dbaeumer.vscode-eslint
+dotenv.dotenv-vscode
+eamodio.gitlens
+editorconfig.editorconfig
+esbenp.prettier-vscode
+file-icons.file-icons
+joelcrosby.one-dark-darker
+mgmcdermott.vscode-language-babel
+ms-vscode.vscode-typescript-next
+unifiedjs.vscode-mdx
+yoavbls.pretty-ts-errors
+zachgawlik.convert-object-to-jsx

@@ -1,0 +1,95 @@
+{
+  // File Associations
+  "files.associations": {
+    ".env*": "dotenv",
+    "CODEOWNERS": "ignore",
+    "tsconfig.*.json": "jsonc"
+  },
+
+  // Editor Settings
+  "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "editor.semanticHighlighting.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+
+  // Workbench Settings
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.enablePreview": false,
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "file-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.view.alwaysShowHeaderActions": false,
+
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#151a1d",
+    "activityBar.border": "#0e1213",
+    "activityBar.foreground": "#626e73",
+    "editor.background": "#191e22",
+    "editorGroupHeader.tabsBackground": "#151a1d",
+    "editorGroupHeader.tabsBorder": "#0e1213",
+    "gitDecoration.ignoredResourceForeground": "#343a3e",
+    "scrollbar.shadow": "#00000059",
+    "sideBar.background": "#151a1d",
+    "sideBar.border": "#0e1213",
+    "sideBar.foreground": "#626e73",
+    "sideBarSectionHeader.background": "#151a1d",
+    "statusBar.background": "#151a1d",
+    "statusBar.border": "#0e1213",
+    "statusBar.foreground": "#626e73",
+    "tab.activeBackground": "#191e22",
+    "tab.activeBorder": "#191e22",
+    "tab.activeBorderTop": "#1665ab",
+    "tab.hoverBackground": "#191e22",
+    "tab.inactiveBackground": "#151a1d",
+    "titleBar.activeBackground": "#151a1d",
+    "titleBar.activeForeground": "#cccccc",
+    "titleBar.border": "#0e1213",
+    "widget.shadow": "#00000059"
+  },
+
+  "oneDarkPro.vivid": true,
+
+  // Window Settings
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.layoutControl.type": "menu",
+
+  // JSON Schema Settings
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://biomejs.dev": true
+  },
+
+  // Terminal Settings
+  "terminal.integrated.fontSize": 15,
+
+  // Markdown Settings
+  "markdown.preview.fontSize": 15,
+
+  // Other Settings
+  "breadcrumbs.enabled": true,
+  "claudeCode.preferredLocation": "panel"
+}
